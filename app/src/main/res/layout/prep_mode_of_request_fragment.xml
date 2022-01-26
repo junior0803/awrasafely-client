@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mode of Request"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/pf_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Province of Facility"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+            <EditText
+                android:id="@+id/et_pf"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Province of Facility"
+                app:layout_constraintStart_toStartOf="@+id/pf_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pf_text" />
+
+            <TextView
+                android:id="@+id/cf_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City of Facility"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_pf"
+                app:layout_constraintTop_toBottomOf="@+id/et_pf" />
+
+            <EditText
+                android:id="@+id/cf_fm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="City of Facility"
+                app:layout_constraintStart_toStartOf="@+id/cf_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cf_text" />
+
+
+            <TextView
+                android:id="@+id/prf_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred Facility"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/cf_fm"
+                app:layout_constraintTop_toBottomOf="@+id/cf_fm" />
+
+            <EditText
+                android:id="@+id/prf_nm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Prefered Facility"
+                app:layout_constraintStart_toStartOf="@+id/prf_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prf_text" />
+
+
+            <TextView
+                android:focusable="false"
+                android:id="@+id/tt_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mode of Request"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/prf_nm"
+                app:layout_constraintTop_toBottomOf="@+id/prf_nm" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/et_tt"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Type of Test"
+                app:layout_constraintStart_toStartOf="@+id/tt_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tt_text" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/prs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred Schedule"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_tt"
+                app:layout_constraintTop_toBottomOf="@+id/et_tt" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_ps"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_background"
+                app:layout_constraintStart_toStartOf="@+id/prs_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prs_text"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_calendar"
+                    android:padding="7dp"
+                    android:layout_weight="1"/>
+
+
+                <EditText
+                    android:focusable="false"
+                    android:id="@+id/et_bd"
+                    android:layout_margin="2dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="13dp"
+                    android:hint="MM/DD/YY" />
+            </LinearLayout>
+
+
+
+
+            <!--            For Request Self-test kit for Delivery-->
+
+            <TextView
+                android:id="@+id/da_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Address"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_tt"
+                app:layout_constraintTop_toBottomOf="@+id/et_tt" />
+
+            <LinearLayout
+                android:id="@+id/ll_da"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_background"
+                app:layout_constraintStart_toStartOf="@+id/da_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/da_text"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_home"
+                    android:padding="3dp"
+                    android:layout_weight="1"/>
+
+
+                <EditText
+                    android:id="@+id/et_da"
+                    android:layout_margin="2dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="42dp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="13dp"
+                    android:paddingLeft="5dp"
+                    android:hint="Enter your Address" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mobile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ll_da"
+                app:layout_constraintTop_toBottomOf="@+id/ll_da" />
+
+            <LinearLayout
+                android:id="@+id/mob"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="@+id/mobile_text"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_extension"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_background"
+                    android:orientation="horizontal"
+                    android:layout_weight="2.2"
+                    android:weightSum="10"
+                    app:layout_constraintStart_toStartOf="@+id/mobile_text"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:src="@drawable/ph_flag" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center|left"
+                        android:text="+63"
+                        android:textColor="@color/black"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"/>
+                <EditText
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:id="@+id/et_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Mobile Number"
+                    android:layout_weight="6.5"
+                    android:padding="10dp"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ts_em"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ll_mobile_extension"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile_text" />
+            </LinearLayout>
+
+
+            <!--            For Schedule visit at the facility-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_sf"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintStart_toStartOf="@+id/ll_ps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_ps"
+                android:weightSum="10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sb_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:text="Would you like to get tested in STIs (syphills, gonorrhea, etc)?"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/et_bo"
+                    app:layout_constraintTop_toBottomOf="@+id/et_bo" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/rg"
+                        android:weightSum="10"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/radio_male"
+                            android:layout_width="0dp"
+                            android:theme="@style/RadioButtonStyle"
+                            android:layout_weight="4.5"
+                            android:background="@drawable/rounded_rectangle_unclicked"
+                            android:layout_height="match_parent"
+                            android:text="Yes"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <RadioButton android:id="@+id/radio_female"
+                            android:layout_width="0dp"
+                            android:theme="@style/RadioButtonStyle"
+                            android:background="@drawable/rounded_rectangle_unclicked"
+                            android:layout_weight="4.5"
+                            android:layout_height="match_parent"
+                            android:text="No"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_rd"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintStart_toStartOf="@+id/mob"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mob"
+                android:weightSum="10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:text="Would you like to request condoms and lubricants for free?"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/et_bo"
+                    app:layout_constraintTop_toBottomOf="@+id/et_bo" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/rg_rd"
+                        android:weightSum="10"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/radio_yes"
+                            android:layout_width="0dp"
+                            android:theme="@style/RadioButtonStyle"
+                            android:layout_weight="4.5"
+                            android:background="@drawable/rounded_rectangle_unclicked"
+                            android:layout_height="match_parent"
+                            android:text="Yes"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <RadioButton android:id="@+id/radio_no"
+                            android:layout_width="0dp"
+                            android:theme="@style/RadioButtonStyle"
+                            android:background="@drawable/rounded_rectangle_unclicked"
+                            android:layout_weight="4.5"
+                            android:layout_height="match_parent"
+                            android:text="No"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/cl"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintStart_toStartOf="@+id/ll_rd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_rd"
+                android:weightSum="10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                    <TextView
+                        android:text="Number of Condoms"
+                        android:layout_width="0dp"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                    <it.sephiroth.android.library.numberpicker.NumberPicker
+                        android:id="@+id/numberPicker_condom"
+                        style="@style/NumberPicker.Filled.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:progress="0"
+                        app:picker_max="10"
+                        app:picker_min="0"
+                        app:picker_orientation="vertical"
+                        app:picker_stepSize="1"
+                        app:picker_tracker="exponential" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                    <TextView
+                        android:text="Number of Lubricants"
+                        android:layout_width="0dp"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                    <it.sephiroth.android.library.numberpicker.NumberPicker
+                        android:id="@+id/numberPicker"
+                        style="@style/NumberPicker.Filled.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:progress="0"
+                        app:picker_max="10"
+                        app:picker_min="0"
+                        app:picker_orientation="vertical"
+                        app:picker_stepSize="1"
+                        app:picker_tracker="exponential" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_pp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:theme="@style/RadioButtonStyle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_pp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="center|left"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                android:text="Privacy Policy Participation Agreement"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/cb_pp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="4"-->
+        <!--            android:theme="@style/RadioButtonStyle"-->
+        <!--            android:background="@drawable/rounded_rectangle_unclicked"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:layout_marginRight="20dp"-->
+        <!--            android:text="Privacy Policy Participation Agreement"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:textColor="@color/blue"-->
+        <!--            android:textSize="14dp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:enabled="false"
+            android:clickable="false"
+            android:id="@+id/tv_ts_ct_next"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_rectangle_blue_disabled"
+            android:text="Next"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

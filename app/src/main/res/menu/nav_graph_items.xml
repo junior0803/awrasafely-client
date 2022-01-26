@@ -1,0 +1,26 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_stepper"
+    app:startDestination="@id/step_personal_info">
+
+    <fragment
+        android:id="@+id/step_personal_info"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.NewPersonalInformationFragment"
+        android:label="Personal Information" />
+
+    <fragment
+        android:id="@+id/step_lisk_assesss"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.RiskAssessmentFragment"
+        android:label="Risk Assessment" />
+
+    <fragment
+        android:id="@+id/step_mode_request"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.ModeOfRequestFragment"
+        android:label="Mode of Request" />
+
+    <fragment
+        android:id="@+id/step_summary"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.SummaryFragment"
+        android:label="Summary" />
+
+</navigation>

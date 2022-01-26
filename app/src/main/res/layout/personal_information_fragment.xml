@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="9">
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Personal Information"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/uic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UIC"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/uic_ti"
+            app:errorEnabled="false"
+            app:hintEnabled="false"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:layout_constraintStart_toStartOf="@+id/uic_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uic_text" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:textSize="13sp"
+                android:background="@drawable/textbox_unclicked"
+                android:inputType="textCapCharacters"
+                android:maxLength="14"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:digits="abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:padding="10dp"
+                android:id="@+id/et_uic"
+                android:hint="UIC" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/uic_ti" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/em_ti"
+            app:errorEnabled="false"
+            app:hintEnabled="false"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:layout_constraintStart_toStartOf="@+id/uic_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_text" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/textbox_unclicked"
+                android:id="@+id/et_email"
+                android:hint="Email Address" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/mobile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/em_ti" />
+
+        <LinearLayout
+            android:id="@+id/mob"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_constraintStart_toStartOf="@+id/mobile_text"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5" />
+
+            <LinearLayout
+                android:id="@+id/ec_mobile_extension"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="@drawable/textbox_unclicked"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="@+id/mobile_text"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_ph" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+63"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7.4"
+                    android:background="#0000ffff"
+                    android:hint="995483XXXX"
+                    android:inputType="number"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:maxLength="10"
+                    android:layout_marginEnd="14dp"
+                    android:paddingLeft="2dp"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ts_em"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ll_mobile_extension"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile_text" />
+
+
+            </LinearLayout>
+
+                            <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/mob_err"
+            android:text="This field is required"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF5722"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="14dp"
+            android:visibility="gone"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/mob"/>
+
+        <TextView
+            android:id="@+id/forgot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot your log in details? \nContact US"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:textColor="#428EFE"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/mob" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+        <TextView
+            android:enabled="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/tv_ts_ct_next"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_rectangle_blue_enabled"
+            android:text="Next"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

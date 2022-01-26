@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">AwraSafely</string>
+    <string name="login_forgot_password_text">Forgot password?</string>
+    <string name="login_email_text">Email</string>
+    <string name="login_password_text">Password</string>
+    <string name="title_home">Home</string>
+    <string name="title_request">Request</string>
+    <string name="title_timekeeping">Timekeeping</string>
+
+
+
+    <!--    Authorization-->
+    <string name="client_id">$2y$12$AMphPuDnH5xzkm1NxUylXe/B8eQCph.i5dVaZpl1YuZan1V9WP2tO</string>
+    <string name="client_secret">$2b$10$izuLaeuxhBnHb1.LlOpkpeOcgHSx5nZRPbD7yE.FbdH/3kN1ny1qu</string>
+    <string name="base_path">http://api-dev.pragmahr.com:8080</string>
+    <string name="base_path_pragger">https://api.pragger.com/</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_engage">Engage</string>
+    <string name="find_your_account">Find your account</string>
+    <string name="enter_your_email_to_send_reset_password">Enter your email to send reset password</string>
+    <string name="email">Email</string>
+    <string name="submit">Submit</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="time_keeping">Time Keeping</string>
+    <string name="time_in">Time In</string>
+    <string name="shutter_button">Shutter button</string>
+    <string name="no_time"> - - : - - : - - </string>
+    <string name="darkGreen">#15A83e</string>
+    <string name="orange">#f69207</string>
+    <string name="red">#FF0303</string>
+    <string name="free_condoms_n_lubes">Condoms and Lubes</string>
+
+    <string name="online_care">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</string>
+    <string name="online_care_title">Online Legal Care</string>
+    <string name="online_care_button">Consult now</string>
+
+    `
+
+
+
+</resources>

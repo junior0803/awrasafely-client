@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.7">
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Risk Assessment"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of last sex with Male"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/et_dm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Date of last sex with Male"
+                app:layout_constraintStart_toStartOf="@+id/dm_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dm_text" />
+
+
+            <TextView
+                android:id="@+id/nm_text"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:text="Number of male/ TGW Sex Partners(Last 12 Months)"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_dm" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/et_nm2"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Number of male/ TGW Sex Partners(Last 12 Months)"
+                app:layout_constraintStart_toStartOf="@+id/nm_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nm_text" />
+
+            <TextView
+                android:id="@+id/df_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of last sex with Female"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_nm2"
+                app:layout_constraintTop_toBottomOf="@+id/et_nm2" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/et_fm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Date of last sex with Female"
+                app:layout_constraintStart_toStartOf="@+id/df_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/df_text" />
+
+
+            <TextView
+                android:id="@+id/nf_text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Number of female/ TGW Sex Partners(Last 12 Months)"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_fm"
+                app:layout_constraintTop_toBottomOf="@+id/et_fm" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/ef_nm2"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Number of female/ TGW Sex Partners(Last 12 Months)"
+                app:layout_constraintStart_toStartOf="@+id/nf_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nf_text" />
+
+            <TextView
+                android:id="@+id/ts_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of sex"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ef_nm2"
+                app:layout_constraintTop_toBottomOf="@+id/ef_nm2" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/ts_nm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Type of sex"
+                app:layout_constraintStart_toStartOf="@+id/ts_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ts_text" />
+
+            <TextView
+                android:id="@+id/cu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condom Use"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ts_nm"
+                app:layout_constraintTop_toBottomOf="@+id/ts_nm" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/cu_nm"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Condom Use"
+                app:layout_constraintStart_toStartOf="@+id/cu_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_text" />
+
+            <TextView
+                android:id="@+id/sb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have you Injected Drugs?"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/cu_nm"
+                app:layout_constraintTop_toBottomOf="@+id/cu_nm" />
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_sb"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:weightSum="10"
+                app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/rg"
+                    android:weightSum="10"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/radio_yes"
+                        android:layout_width="0dp"
+                        android:theme="@style/RadioButtonStyle"
+                        android:layout_weight="4.5"
+                        android:background="@drawable/rounded_rectangle_unclicked"
+                        android:layout_height="match_parent"
+                        android:text="Yes"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <RadioButton android:id="@+id/radio_no"
+                        android:layout_width="0dp"
+                        android:theme="@style/RadioButtonStyle"
+                        android:background="@drawable/rounded_rectangle_unclicked"
+                        android:layout_weight="4.5"
+                        android:layout_height="match_parent"
+                        android:text="No"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/cu_nm"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1.3">
+        <TextView
+            android:enabled="false"
+            android:clickable="false"
+            android:id="@+id/tv_ts_ct_next"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_rectangle_blue_disabled"
+            android:text="Next"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

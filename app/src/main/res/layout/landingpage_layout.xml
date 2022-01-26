@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F9F9FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F9F9FB"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:title="@string/app_name"
+            app:titleTextColor="@android:color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left">
+
+                <ImageView
+                    android:id="@+id/awra_logo"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:id="@+id/awra_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Awrasafely"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/awra_logo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/ll_first_line"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".75" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_testing"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="#FC9C9C"
+                    android:background="@drawable/rounded_rectangle"
+                    android:clickable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="HIV \nTesting"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/test" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_prep"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="#BDE7A3"
+                    android:background="@drawable/rounded_rectangle"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="PrEP"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/prep" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_second_line"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_first_line">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".75" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_arv"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                android:backgroundTint="#F9CDA1"
+                    android:background="@drawable/rounded_rectangle"
+                    android:clickable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="ARV"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/arv" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_fcl"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="#FAF7A5"
+                    android:background="@drawable/rounded_rectangle"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="@string/free_condoms_n_lubes"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/fcl" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_third_line"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_second_line">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".75" />
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/lp_ll_rf"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="71dp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:backgroundTint="#B6C8FF"-->
+<!--                    android:background="@drawable/rounded_rectangle"-->
+<!--                    android:clickable="true"-->
+<!--                    android:gravity="center|left"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="10">-->
+
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight=".5" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:text="Refer a \n Friend"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="14dp"-->
+<!--                        android:textStyle="bold" />-->
+
+
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1.5" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_weight="2.5"-->
+<!--                        android:src="@drawable/rf" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight=".5" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/lp_ll_mm"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="71dp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:backgroundTint="#99A9F0"-->
+<!--                    android:background="@drawable/rounded_rectangle"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="10">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:text="My \nMedicab"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="14dp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_weight="2.5"-->
+<!--                        android:src="@drawable/fcl" />-->
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_forth_line"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_third_line">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".75" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_str"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="#CC99C9"
+                    android:background="@drawable/rounded_rectangle"
+                    android:clickable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="Self Test \nResult"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/str" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5" />
+
+                <LinearLayout
+                    android:id="@+id/lp_ll_cr"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="#EEECF6"
+                    android:background="@drawable/rounded_rectangle"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:text="Cancel Request"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="2.5"
+                        android:src="@drawable/fcl" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_arv"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center|left"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_testing">-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight=".5" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="5"-->
+            <!--                            android:text="ARV \n Request"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight="1.5" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="50dp"-->
+            <!--                            android:layout_weight="2.5"-->
+            <!--                            android:src="@drawable/arv" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_fcl"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_prep">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="5"-->
+            <!--                            android:text="@string/free_condoms_n_lubes"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight="1" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="40dp"-->
+            <!--                            android:layout_weight="2.5"-->
+            <!--                            android:src="@drawable/fcl" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_rf"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center|left"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_arv">-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight=".5" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="5"-->
+            <!--                            android:text="Refer a \n friend"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight="1.5" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="35dp"-->
+            <!--                            android:layout_weight="2.5"-->
+            <!--                            android:src="@drawable/rf" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_mm"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_fcl">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="5"-->
+            <!--                            android:text="My \n Medicab"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight="1" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="40dp"-->
+            <!--                            android:layout_weight="2.5"-->
+            <!--                            android:src="@drawable/fcl" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_str"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center|left"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_testing"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_rf">-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight=".5" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="5"-->
+            <!--                            android:text="Self Test \n Result"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+
+            <!--                        <View-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_weight="1.2" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="50dp"-->
+            <!--                            android:layout_weight="3"-->
+            <!--                            android:src="@drawable/str" />-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:id="@+id/lp_ll_cr"-->
+            <!--                        android:layout_width="170dp"-->
+            <!--                        android:layout_height="71dp"-->
+            <!--                        android:layout_marginTop="15dp"-->
+            <!--                        android:background="@drawable/rounded_rectangle"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        app:layout_constraintEnd_toEndOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintStart_toStartOf="@+id/lp_ll_prep"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/lp_ll_mm">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:layout_marginTop="5dp"-->
+            <!--                            android:layout_weight="6"-->
+            <!--                            android:text="Cancellation \n of Request"-->
+            <!--                            android:textColor="@android:color/black"-->
+            <!--                            android:textSize="14dp"-->
+            <!--                            android:textStyle="bold" />-->
+
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="0dp"-->
+            <!--                            android:layout_height="40dp"-->
+            <!--                            android:layout_weight="2.5"-->
+            <!--                            android:src="@drawable/fcl" />-->
+
+            <!--                    </LinearLayout>-->
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/view_all_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="View all Awrasafely Service  >"
+                android:textColor="#2E3192"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_forth_line" />
+
+            <TextView
+                android:id="@+id/gray_line"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/view_all_services" />
+
+            <TextView
+                android:id="@+id/landing_page_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center|left"
+                android:text="Everything you need to know HIV"
+                android:textColor="#2E3192"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gray_line" />
+
+            <TextView
+                android:id="@+id/landing_page_text_description1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center|left"
+                android:text="Learning the basic about HIV can keep you healthy and protected."
+                android:textColor="#6E6E6E"
+                android:textSize="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/landing_page_text1" />
+
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/sample_video_image"
+                app:layout_constraintTop_toBottomOf="@+id/landing_page_text_description1" />
+
+            <TextView
+                android:id="@+id/gray_line1"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+            <TextView
+                android:id="@+id/landing_page_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center|left"
+                android:text="Just so you know, We're here!"
+                android:textColor="#2E3192"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gray_line1" />
+
+            <TextView
+                android:id="@+id/landing_page_text_description2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center|left"
+                android:text="Recommended for you and friends."
+                android:textColor="#6E6E6E"
+                android:textSize="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/landing_page_text2" />
+
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/sample_video_image"
+                app:layout_constraintTop_toBottomOf="@+id/landing_page_text_description2" />
+
+            <TextView
+                android:id="@+id/gray_line2"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+            <LinearLayout
+                android:background="#F9F9FB"
+                app:layout_constraintStart_toStartOf="@id/gray_line2"
+                app:layout_constraintTop_toBottomOf="@id/gray_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:background="#FCF7DA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:srcCompat="@drawable/online_care"
+                        android:scaleType="centerInside"
+                        android:contentDescription="@string/online_care"
+                        />
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/online_care_title"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="r sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:textColor="@color/blue"
+                            android:text="@string/online_care_button"
+                            style="?attr/borderlessButtonStyle"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="30dp"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/image1"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

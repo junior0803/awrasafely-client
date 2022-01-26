@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+
+        android:id="@+id/close">
+        <item
+            android:title=""
+            android:id="@+id/nav_close"
+            />
+    </group>
+    <group
+        android:id="@+id/about">
+        <item
+            android:id="@+id/nav_about"
+            android:title="About Us"/>
+    </group>
+
+    <group
+        android:id="@+id/fac">
+        <item
+            android:id="@+id/nav_fac"
+            android:title="Facilities"/>
+    </group>
+
+    <group
+        android:id="@+id/tes">
+        <item
+            android:id="@+id/nav_tes"
+            android:title="Testimonials"/>
+    </group>
+
+
+    <group
+        android:id="@+id/faq">
+        <item
+            android:id="@+id/nav_faq"
+            android:title="FAQ's"/>
+    </group>
+
+    <group
+        android:id="@+id/sur">
+
+        <item
+            android:id="@+id/nav_sur"
+            android:title="Survey"/>
+    </group>
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_stepper"
+    app:startDestination="@id/step_new_personal_info">
+
+    <fragment
+        android:id="@+id/step_exist_person_info"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.PersonalInformationFragment"
+        android:label="Personal Information"/>
+
+    <fragment
+        android:id="@+id/step_new_personal_info"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.NewPersonalInformationFragment"
+        android:label="Personal Information"/>
+
+    <fragment
+        android:id="@+id/step_lisk_assesss"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.RiskAssessmentFragment"
+        android:label="Risk Assessment"
+        tools:layout="@layout/risk_assessment_fragment"/>
+
+    <fragment
+        android:id="@+id/step_mode_request"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.ModeOfRequestFragment"
+        android:label="Mode of Request"
+        tools:layout="@layout/mode_of_request_fragment"/>
+
+    <fragment
+        android:id="@+id/step_summary"
+        android:name="com.pragmanila.awrasafely.ui.testingservices.fragments.SummaryFragment"
+        android:label="Summery"
+        tools:layout="@layout/summary_fragment"/>
+
+</navigation>

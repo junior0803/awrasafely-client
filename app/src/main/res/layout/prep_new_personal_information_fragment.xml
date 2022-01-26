@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.7">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mother's Name"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+            <EditText
+                android:id="@+id/et_mn"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:maxLength="2"
+                android:inputType="textCapCharacters"
+                android:textAllCaps="true"
+                android:hint="First 2 letter of your Mother's Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mn_text" />
+
+            <TextView
+                android:id="@+id/fn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Father's Name"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_mn" />
+
+            <EditText
+                android:id="@+id/et_fn"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="13dp"
+                android:inputType="textCapCharacters"
+                android:padding="10dp"
+                android:maxLength="2"
+                android:textAllCaps="true"
+                android:hint="First 2 letter of your Father's Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fn_text" />
+
+
+            <TextView
+                android:id="@+id/bd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthdate"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/sub_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_fn" />
+
+            <LinearLayout
+                android:id="@+id/ll_birthdate"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_background"
+                app:layout_constraintStart_toStartOf="@+id/bd_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bd_text"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_calendar"
+                    android:padding="7dp"
+                    android:layout_weight="1"/>
+
+
+                <EditText
+                    android:focusable="false"
+                    android:id="@+id/et_bd"
+                    android:layout_margin="2dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="13dp"
+                    android:hint="MM/DD/YY" />
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/bo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birth Order"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ll_birthdate"
+                app:layout_constraintTop_toBottomOf="@+id/ll_birthdate" />
+
+            <EditText
+                android:inputType="number"
+                android:maxLength="2"
+                android:id="@+id/et_bo"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Birth Order"
+                app:layout_constraintStart_toStartOf="@+id/bo_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bo_text" />
+
+
+            <TextView
+                android:id="@+id/sb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sex at Birth"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/et_bo"
+                app:layout_constraintTop_toBottomOf="@+id/et_bo" />
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_sb"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:weightSum="10"
+                app:layout_constraintTop_toBottomOf="@+id/sb_text">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/rg"
+                    android:weightSum="10"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/radio_male"
+                        android:layout_width="0dp"
+                        android:theme="@style/RadioButtonStyle"
+                        android:layout_weight="4.5"
+                        android:background="@drawable/rounded_rectangle_unclicked"
+                        android:layout_height="match_parent"
+                        android:text="Male"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <RadioButton android:id="@+id/radio_female"
+                        android:layout_width="0dp"
+                        android:theme="@style/RadioButtonStyle"
+                        android:background="@drawable/rounded_rectangle_unclicked"
+                        android:layout_weight="4.5"
+                        android:layout_height="match_parent"
+                        android:text="Female"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/si_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Self Identity"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ll_sb"
+                app:layout_constraintTop_toBottomOf="@+id/ll_sb" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/ef_si"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:hint="Self Identity"
+                app:layout_constraintStart_toStartOf="@+id/si_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/si_text" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ef_si"
+                app:layout_constraintTop_toBottomOf="@+id/ef_si" />
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/ts_em"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"
+                android:padding="6dp"
+                android:hint="Email Address"
+                app:layout_constraintStart_toStartOf="@+id/email_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+            <TextView
+                android:id="@+id/mobile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:layout_marginTop="20dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/ts_em"
+                app:layout_constraintTop_toBottomOf="@+id/ts_em" />
+
+            <LinearLayout
+                android:id="@+id/mob"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintStart_toStartOf="@+id/mobile_text"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_extension"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_background"
+                    android:orientation="horizontal"
+                    android:layout_weight="2.2"
+                    android:weightSum="10"
+                    app:layout_constraintStart_toStartOf="@+id/mobile_text"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:src="@drawable/ph_flag" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center|left"
+                        android:text="+63"
+                        android:textColor="@color/black"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"/>
+                <EditText
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:id="@+id/et_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Mobile Number"
+                    android:layout_weight="6.5"
+                    android:padding="10dp"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ts_em"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ll_mobile_extension"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile_text" />
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1.3">
+        <TextView
+            android:enabled="false"
+            android:clickable="false"
+            android:id="@+id/tv_ts_ct_next"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_rectangle_blue_disabled"
+            android:text="Next"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

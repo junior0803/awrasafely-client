@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/step_new_personal_info"
+        android:title="Personal Information" />
+
+    <item android:id="@+id/step_lisk_assesss"
+        android:title="Risk Assessment" />
+
+    <item android:id="@+id/step_mode_request"
+        android:title="Mode of Request" />
+
+    <item android:id="@+id/step_summary"
+        android:title="Summary" />
+
+</menu>

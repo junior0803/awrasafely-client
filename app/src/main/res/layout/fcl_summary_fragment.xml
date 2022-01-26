@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.landingpage.LandingPageActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Personal Information"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tt_text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="Show your QR Code to the facility this will serve as your transaction ID"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+        <ImageView
+            android:id="@+id/iv_qr"
+            android:layout_marginTop="10dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/sample_qr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tt_text" />
+
+        <TextView
+            android:id="@+id/tv_save_image"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/rounded_rectangle_clicked"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Save Image"
+            android:layout_marginTop="30dp"
+            android:textColor="#51C040"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/iv_qr"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <TextView
+            android:id="@+id/uic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UIC :"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_save_image" />
+
+        <TextView
+            android:id="@+id/uic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="TESTUIC20210909"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_save_image" />
+
+        <TextView
+            android:id="@+id/ref_num__title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reference Number :"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/uic_title" />
+
+        <TextView
+            android:id="@+id/ref_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="100001"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uic_title" />
+
+
+        <TextView
+            android:id="@+id/chosen_facility_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chosen Facility :"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/ref_num" />
+
+        <TextView
+            android:id="@+id/chosen_facility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Kapitagan Quezon"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ref_num" />
+
+
+        <TextView
+            android:id="@+id/mobile_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number :"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/chosen_facility" />
+
+        <TextView
+            android:id="@+id/mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="09052324618"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chosen_facility" />
+
+        <TextView
+            android:id="@+id/email_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number :"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/chosen_facility" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="09052324618"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chosen_facility" />
+
+        <TextView
+            android:id="@+id/scheduled_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scheduled Date :"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_save_image"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <TextView
+            android:id="@+id/scheduled_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="September 9, 2021 1:32 PM"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <TextView
+            android:id="@+id/kt_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            android:text="Kindly take note your UIC, Email Address and/or \nContact Number. The system will required you to \nprovide these information on your next request"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_date" />
+
+        <TextView
+            android:id="@+id/tv_ts_ct_done"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="35dp"
+            android:background="#51C040"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Done"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/kt_text"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ts_ct_done"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
